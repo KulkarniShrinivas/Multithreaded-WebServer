@@ -35,9 +35,27 @@ public class Server{
             //this will print the socket ip address of the client ^
                 PrintWriter toClient = new PrintWriter(acceptedConnection.getOutputStream(), true);
 
+             //printwriter
+            //this will be used to send the data to the client
+            //From client -> sever will accept the connection and we were listenimng IP and Port(8010)
+            //So when c1 requests the server then server have opened the socket
+            //so client----->server
+            // ------------------- (opened socket)(output stream will be from server and input stream will be from client)
+            //socket open then will be getting bits/bytes
+            //so I need to write something on outputstream so using printwriter class we can write
 
+            //I will be using BufferedReader to read the data from the client
+           //Input stream I will be using buffer reader
+           //so in this whatever bytes will get it will combine  and give the result
+           //PrintWriter->  In this whatever we give text it will convert into bytes and send to the client
+           //BufferedReader-> In this whatever bytes we get it will convert into text and give the result
 
+            BufferedReader fromclient = new BufferedReader(new InputStreamReader(acceptedConnection.getInputStream()));
 
+            toClient.println("Hello from the Server");
+
+            //client---->server
+            //fromclient------toclient
 
             
         }
@@ -46,6 +64,11 @@ public class Server{
     }
 
     public static void main(String[] args){
-
+        try{
+            Server server = new Server();
+            server.run();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
     }
 }
