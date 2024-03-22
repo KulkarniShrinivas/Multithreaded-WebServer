@@ -14,7 +14,7 @@ public class Server{
         int port = 8010;
 
         //we have opened a server socket on this port
-        ServerSocket Socket = new ServerSocket(port);
+        ServerSocket socket = new ServerSocket(port);
         //ifconfig will give you the ip address of your machine
 
         socket.setSoTimeout(10000);
@@ -55,7 +55,8 @@ public class Server{
             toClient.println("Hello from the Server");
 
             //client---->server
-            //fromclient------toclient
+            //fromclient------toclient  |------------|
+            //in---------------out
 
             
         }
@@ -64,11 +65,11 @@ public class Server{
     }
 
     public static void main(String[] args){
+        Server server = new Server();
         try{
-            Server server = new Server();
             server.run();
-        }catch(IOException e){
-            e.printStackTrace();
+        }catch(IOException ex){
+            ex.printStackTrace();
         }
     }
 }
