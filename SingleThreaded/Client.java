@@ -3,7 +3,9 @@
 //will be using Jmeter because in jmeter we can spoun multiple threads and we can send multiple requests to the server
 
 import java.awt.print.Printable;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
@@ -23,7 +25,26 @@ public class Client {
         //socket will be throwing IO exception so we will be catching it by IoException
         //So whatever we have created the socket for client will be having input/output socket
 
+
+
+        //client---->server
+        //toSocket(PrintWriter)------fromSocket(Buffer)  |------------|
+        //PrintWriter(to write)->
+        //Buffer(to read)-> In this whatever bytes we get it will convert into text and give the result
+        //in---------------out
+        //client will be connecting so I will be opening the socket and will be connecting to the server
+        //so I will be using printwriter to write the data to the server
         PrintWriter toSocket = new PrintWriter(socket.getOutputStream(), true);
+        BufferedReader fromSocket = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+
+        //socket input we need to take
+        //so we will be using InputStreamReader to read the data from the socket
+        //so we will be using BufferedReader to read the data from the socket
+
+        toSocket.println("Hello from the client");
+
+        String line = fromSocket.readLine();
+        System.out.println("Response from the socket is : "+line);
     }
 
 }
