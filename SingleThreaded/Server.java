@@ -63,6 +63,8 @@ public class Server{
 
 
     }
+    //I will be creating this class because the function which we defined is not static method
+    //if its not static method then it will not be stored in memory or it will not be there
 
     public static void main(String[] args){
         Server server = new Server();
