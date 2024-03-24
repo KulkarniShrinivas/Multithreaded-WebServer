@@ -9,7 +9,7 @@ import java.net.UnknownHostException;
 
 public class Server{
 
-    public void run() throws IOException, UnknownHostException{
+    public void run() throws   IOException, UnknownHostException{
         //will define port so that our server can listen to that port
         int port = 8010;
 
@@ -17,7 +17,7 @@ public class Server{
         ServerSocket socket = new ServerSocket(port);
         //ifconfig will give you the ip address of your machine
 
-        socket.setSoTimeout(10000);
+        socket.setSoTimeout(20000);
         //this will make the server to wait for 10 seconds for the client to connect
         //if the client does not connect in 10 seconds, the server will throw an exception and it will closes automatically 
         //but in realtime production socket will be always open
@@ -58,6 +58,9 @@ public class Server{
             //fromclient------toclient  |------------|
             //in---------------out
 
+            toClient.close();
+            fromclient.close();
+            acceptedConnection.close();
             
         }
 
@@ -68,11 +71,11 @@ public class Server{
 
     public static void main(String[] args){
         Server server = new Server();
-       // so for this will be creating instance
         try{
             server.run();
-        }catch(IOException ex){
+        }catch(Exception ex){
             ex.printStackTrace();
         }
     }
+
 }

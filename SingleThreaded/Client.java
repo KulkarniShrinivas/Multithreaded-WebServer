@@ -45,6 +45,22 @@ public class Client {
 
         String line = fromSocket.readLine();
         System.out.println("Response from the socket is : "+line);
+
+        toSocket.close();
+        fromSocket.close();
+        socket.close();
+        
+    }
+    public static void main(String[] args) {
+        try {
+            //will be creating the object of the class and will be calling the run method
+            Client client = new Client();
+            client.run();
+        } catch (Exception e) {
+            // TODO: handle exception
+            e.printStackTrace();
+        }
     }
 
 }
+//output after connecting to the server specific time it wil disconnects and throws an exception
