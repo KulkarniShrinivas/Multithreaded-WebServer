@@ -13,7 +13,7 @@ import java.net.UnknownHostException;
 
 public class Client {
 
-    public void run() throws UnknownHostException, IOException {
+    public void run() throws IOException {
         int port = 8010;
         //server will be runninning on locol port on machine itself
         InetAddress adress = InetAddress.getByName("localhost");

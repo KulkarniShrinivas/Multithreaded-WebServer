@@ -9,7 +9,7 @@ import java.net.UnknownHostException;
 
 public class Server{
 
-    public void run() throws   IOException, UnknownHostException{
+    public void run() throws   IOException {
         //will define port so that our server can listen to that port
         int port = 8010;
 
