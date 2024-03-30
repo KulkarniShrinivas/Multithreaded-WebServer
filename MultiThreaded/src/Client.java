@@ -54,17 +54,15 @@ public class Client {
         //spooning of 100 clients in some miliseconds diffreance
 
 
-        for (int i=0; i<100; i++){
+        for(int i=0; i<100; i++){
             try{
-                Thread thread = new Thread(clinet.getRunnable());
+                //Runnable is functional interface so we can pass the function as a parameter
+                Thread thread = new Thread(client.getRunnable());
                 thread.start();
-                //I wil start the clinet thread  and will be sending the request to the server
-            } catch (Exception e){
-                //return the exception
-                e.printStackTrace();
+            }catch(Exception ex){
+                return;
             }
-
         }
+        return;
     }
-
 }
