@@ -1,7 +1,5 @@
 
 
----
-
 # Multithreaded Web Server
 
 ## Introduction
