@@ -70,3 +70,20 @@ public class Server {
         }
     }
 }
+
+// Steps to rhit the request to the server using Jmeter
+
+//I will be installing Jmeter for checking the number of request that I can hit
+//cd apache-jmeter-5.6.3/bin
+//./jmeter
+//I will be creating a new test plan
+//I will be adding a thread group
+//I will add How many users I need to hit/spoon(Number of Threads)
+//I will add the ramp-up period/How many seconds it will take to hit the server ex-60seconds
+//will be making 1k request per second
+//I will be adding the sampler
+//I will be adding the TCP sampler
+//I will be adding the server name and port number
+//For this I will adding result Tree and view result in table
+//Also will be adding graph result
+//I will be running the test
