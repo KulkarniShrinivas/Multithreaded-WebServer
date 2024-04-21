@@ -137,3 +137,78 @@ Multithreaded
  
  so it has drawbackk (25:30) 
  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ //Single Threaded Conclusion
+ after running 50000 throughputs
+In single threaded we are doing light weight operation
+So we are getting 50000 throughputs
+So we are getting 50000 requests per second
+If I am reading file or writing file then it will be heavy operation so other threads will be waiting or it will be in queue or deadlock
+
+Single Threaded with 600k
+
+600k requests to from client to server in single threaded system goes into hang state and stop responding 
+
+
+*MultiThreaded*
+
+In multiThreaded 60k requests runs smoothly and what makes diffrent compare to singlethreaded is that connection time will be 0sec
+60k is not heavy task for multithreaded server
+
+*600k reqest from client to server through MUltiThreaded server*
+Runns smoothly but we may face some error or connection refuse in multithreaded 
+
+
+
+
+jmeter apache-jmeter-5.6.3/bin
+
+
+Taking task and submiting the taskk and executing and adding the task in queue all this is done by
+Executer Service through
+How we were spooning threads same we will be using 
+
+ 
+will be making pool size as 10
+port size running will be on 10 and intialized 
+
+created new server and opened socket 
+and set the timeout for 7min
+
+later the client socket has been opened
+server that we have class as server and took instance and we did .thread 
+and in handleclient we gave it as runnable(it will not take anything and give just I run )
+
+
+
+*Thread Pool*
+smooth running of file 
+good graph
+
+
+
+Improvement
+
+Server side we need to read the file and send it to client so while reading file it will be time consuming and time consuming 
+So because of this our 1 thread will be busy or it will be blocked  because of this will get good results 
+
+
+2. Increase the thread pool size make it 100 (prepare 100 threads  for me 1st only so what diviaion will get) 
+
+jmeter, listners
+Threadpool vs EventLoop
+Executer Service
+
+
+
+
+
+//Single Threaded with 600k system goes into hang
