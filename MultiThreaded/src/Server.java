@@ -43,7 +43,7 @@ public class Server {
             ServerSocket serverSocket = new ServerSocket(port);
             //ifconfig will give you the ip address of your machine
 
-            serverSocket.setSoTimeout(10000);
+            serverSocket.setSoTimeout(70000);
             //this will make the server to wait for 10 seconds for the client to connect
             //if the client does not connect in 10 seconds, the server will throw an exception and it will closes automatically
             //but in realtime production socket will be always open

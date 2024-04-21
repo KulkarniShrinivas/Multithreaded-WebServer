@@ -80,4 +80,12 @@ public class Server{
 
 }
 
+//Single Threaded Conclusion
+//after running 50000 throughputs
+//In single threaded we are doing light weight operation
+//So we are getting 50000 throughputs
+//So we are getting 50000 requests per second
+//If I am reading file or writing file then it will be heavy operation so other threads will be waiting or it will be in queue or deadlock
+
+
 //jmeter apache-jmeter-5.6.3/bin

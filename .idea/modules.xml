@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MultiThreaded/MultiThreaded.iml" filepath="$PROJECT_DIR$/MultiThreaded/MultiThreaded.iml" />
       <module fileurl="file://$PROJECT_DIR$/Multithreaded-WebServer.iml" filepath="$PROJECT_DIR$/Multithreaded-WebServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThreadPool/ThreadPool.iml" filepath="$PROJECT_DIR$/ThreadPool/ThreadPool.iml" />
     </modules>
   </component>
 </project>
