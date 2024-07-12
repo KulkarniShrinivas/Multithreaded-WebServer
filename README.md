@@ -38,7 +38,6 @@ In this project, we explore the implementation and performance of a multithreade
 - Details about upcoming code implementation and performance testing.
 - Instructions for running and testing the multithreaded web server.
 
-## Feedback and Contributions
-- Encouragement for feedback, suggestions, and contributions to the project.
+
 
 ---
