@@ -7,16 +7,7 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 public class Client {
-    //In single thread we used only one request to send server
-    //But in Multithreaded Client will send multiple requests to the server
-    //So to request Client also required the thread to send multiple requests because we have only one client
-    //So In this we need to spoon 100 clinets to send multiple requests to the server
-    //100 Threads every thread will send the request to the server
-    //So we need to create the 100 threads to send the request to the server
-
-
-    //runnable is interface
-    //Runnable is functional interface
+   
 
     public Runnable getRunnable(){
         //Runnable is functional interface whcih doesnot accept and wont give anything
