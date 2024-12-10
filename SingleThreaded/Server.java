@@ -13,7 +13,7 @@ public class Server{
         //will define port so that our server can listen to that port
         int port = 8010;
 
-        //we have opened a server socket on this port
+   
         ServerSocket socket = new ServerSocket(port);
         
 
@@ -26,7 +26,7 @@ public class Server{
             Socket acceptedConnection = socket.accept();
             
             System.out.println("Connection accepted from client: "+acceptedConnection.getInetAddress());
-            //this will print the socket ip address of the client ^
+           
                 PrintWriter toClient = new PrintWriter(acceptedConnection.getOutputStream(), true);
 
         

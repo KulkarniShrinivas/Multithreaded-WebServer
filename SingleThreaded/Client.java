@@ -1,6 +1,4 @@
-// requesting for server so will be creating class for that
-//sending millions or thousands of requests to the server by using Jmeter not by using client
-// using Jmeter because in jmeter we can spoun multiple threads and we can send multiple requests to the server
+
 
 import java.awt.print.Printable;
 import java.io.BufferedReader;
@@ -36,11 +34,11 @@ public class Client {
     }
     public static void main(String[] args) {
         try {
-            //will be creating the object of the class and will be calling the run method
+         
             Client client = new Client();
             client.run();
         } catch (Exception e) {
-            // TODO: handle exception
+          
             e.printStackTrace();
         }
     }

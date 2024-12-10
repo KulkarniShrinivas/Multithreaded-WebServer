@@ -1,4 +1,4 @@
-// This is the server code which will be running on the server machine
+
 
 
 import java.io.IOException;
@@ -36,12 +36,12 @@ public class Server {
         Server server = new Server();
         try{
             ServerSocket serverSocket = new ServerSocket(port);
-            //ifconfig will give you the ip address of your machine
+            
 
             serverSocket.setSoTimeout(70000);
            
 
-            //this will make the server to wait for the client to connect
+      
             System.out.println("Server is listening on port "+port);
 
             while(true){
